@@ -92,7 +92,7 @@ h2{font-size:clamp(28px,4vw,40px);margin:16px 0 12px}
 
 /* roadmap */
 .road{background:linear-gradient(180deg,#fff 0%,var(--sun-soft) 100%)}
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:44px;counter-reset:s}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;margin-top:44px;counter-reset:s}
 .step{background:#fff;border-radius:var(--radius);padding:26px;box-shadow:0 10px 30px rgba(27,36,68,.07);position:relative}
 .step .when{font-size:13px;font-weight:700;color:var(--ink-3)}
 .step h3{font-size:19px;margin:6px 0 8px}
@@ -111,13 +111,25 @@ h2{font-size:clamp(28px,4vw,40px);margin:16px 0 12px}
 .next div{background:rgba(255,255,255,.07);border-radius:18px;padding:22px}
 .next b{display:block;color:var(--sun);font-size:14px;margin-bottom:4px}
 .next p{margin:0;color:#fff;font-weight:700}
+.quote-list{list-style:none;padding:0;max-width:820px;margin:40px auto 0;display:grid;gap:14px;text-align:left}
+.quote-list li{display:flex;align-items:center;gap:18px;background:rgba(255,255,255,.07);border-radius:18px;padding:20px 24px}
+.q-no{flex:none;width:36px;height:36px;border-radius:50%;background:var(--sun);color:var(--ink);display:grid;place-items:center;font-weight:800}
+.q-text{flex:1;font-weight:700;font-size:17px}
+.q-price{flex:none;min-width:150px;font-size:20px;font-weight:800;color:var(--sun);border-bottom:2px dashed rgba(255,199,44,.6);padding:0 4px 2px}
+.q-note{max-width:820px;margin:22px auto 0;text-align:left;font-size:14px;color:#AEB3CC}
 footer{background:var(--ink);color:#8C92B0;font-size:13px;text-align:center;padding:0 24px 40px}
 
+@media (max-width:1100px){
+  .steps{grid-template-columns:repeat(3,1fr)}
+  .step.camp{transform:none}
+}
 @media (max-width:900px){
   section{padding:64px 0}
   .hero-grid,.packs,.case-grid{grid-template-columns:1fr}
   .common,.next{grid-template-columns:1fr}
   .steps{grid-template-columns:1fr 1fr}
+  .quote-list li{flex-wrap:wrap}
+  .q-price{min-width:0;width:calc(100% - 54px);margin-left:54px}
   .step.camp{transform:none}
   .hero-pic{transform:none}
 }
@@ -262,23 +274,28 @@ footer{background:var(--ink);color:#8C92B0;font-size:13px;text-align:center;padd
 <section class="road" id="longterm">
   <div class="wrap">
     <span class="kicker">長期合作</span>
-    <h2>陪孩子走一整年的合作計畫</h2>
-    <p class="lead">英文的進步需要時間。我們希望和你們家長期合作，跟著孩子的上課進度，一路記錄成長。</p>
+    <h2>合作時程</h2>
+    <p class="lead">從 11 月確認合作開始，跟著孩子 30 堂課的進度一路記錄，2027 年 1 月起影片陸續上線。我們希望和你們家長期合作下去。</p>
     <div class="steps">
       <div class="step">
-        <div class="when">第一步</div>
-        <h3>開始上課</h3>
-        <p>先安排免費體驗課，挑到合適的老師，建立固定上課的習慣。</p>
+        <div class="when">2026 年 11 月初</div>
+        <h3>提案邀約</h3>
+        <p>收到這份邀約，了解 2027 課包與合作內容。</p>
       </div>
       <div class="step">
-        <div class="when">第二步</div>
-        <h3>第一支主片</h3>
-        <p>記錄孩子的起點和第一次開口，讓粉絲跟著你們一起開始。</p>
+        <div class="when">11 月中</div>
+        <h3>確認合作</h3>
+        <p>確認後即提供 30 堂課程，讓孩子完整學習。</p>
       </div>
       <div class="step">
-        <div class="when">第三步</div>
-        <h3>持續記錄成長</h3>
-        <p>依上課進度規劃後續內容，把累積出來的變化拍下來。</p>
+        <div class="when">11 月中起</div>
+        <h3>上課、拍攝、記錄變化</h3>
+        <p>跟著 30 堂課的進度，拍下孩子開口與前後的改變。</p>
+      </div>
+      <div class="step">
+        <div class="when">2027 年 1 月起</div>
+        <h3>影片陸續上線</h3>
+        <p>主片陸續發佈，並開啟廣告投放，讓更多家長看到。</p>
       </div>
       <div class="step camp">
         <span class="badge">未來機會</span>
@@ -293,13 +310,14 @@ footer{background:var(--ink);color:#8C92B0;font-size:13px;text-align:center;padd
 
 <section class="cta" id="next">
   <div class="wrap">
-    <h2>一起開始 2027 的合作</h2>
-    <p class="lead">有興趣的話，直接回覆這份邀約，我們會依你們家的狀況提出專屬的拍攝主題。</p>
-    <div class="next">
-      <div><b>STEP 1</b><p>回覆合作意願</p></div>
-      <div><b>STEP 2</b><p>安排孩子免費體驗課</p></div>
-      <div><b>STEP 3</b><p>一起討論你們家的拍攝主題</p></div>
-    </div>
+    <h2>合作規格詢問</h2>
+    <p class="lead">有興趣的話，請直接回覆這份邀約，提供以下三項報價，我們會盡快和你們確認細節。</p>
+    <ol class="quote-list">
+      <li><span class="q-no">1</span><span class="q-text">一支 3.5 分鐘影片，同文發佈於 FB＋IG</span><span class="q-price">＄</span></li>
+      <li><span class="q-no">2</span><span class="q-text">Meta 廣告主（FB＋IG 雙平台），一個月費用</span><span class="q-price">＄</span></li>
+      <li><span class="q-no">3</span><span class="q-text">廣告主三個月是否有優惠</span><span class="q-price">＄</span></li>
+    </ol>
+    <p class="q-note">＊廣告會開啟 Meta Advantage+（高效速成+）廣告創意，系統自動擷取原片的片段，用 AI 投放給更可能有興趣的家長。</p>
   </div>
 </section>
 <footer>本頁為 51Talk 2027 創作者合作提案，課程內容以 51Talk 官方說明為準。提案整理：知寧創意</footer>
